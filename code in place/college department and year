@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+int dept,yr;
+printf("enter 1 for Cs And 2 for EE:");
+scanf("%d",&dept);
+switch(dept)
+{
+case 1:
+{
+ printf("you are a cs major.Select 1 for first year and 2 for for second year:");
+ scanf("%d",&yr);
+ switch(yr)
+ {
+  case 1: printf("First Year"); break;
+  case 2: printf("Second Year"); break;
+ }
+   } break;
+   case 2:
+   	{
+	   
+    printf("you are an electrical engineering major. \nselect 1 for first year,\n 2 for for second year:");
+ scanf("%d",&yr);
+    
+	    switch(yr)
+       {
+  case 1: printf("First Year"); break;
+  case 2: printf("Second Year"); break;
+       }
+} break;
+   
+}
+}
