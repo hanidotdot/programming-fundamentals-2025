@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+	float n1,n2;
+	int n3;
+	char op;
+	printf("enter the statement to be operated(dont leave space):");
+	scanf("%f%c%f",&n1,&op,&n2);
+	switch(op)
+	{
+		case'+': 
+		printf("%.0f %c %.0f=%.0f",n1,op,n2,n1+n2); break;
+		case'-': 
+		printf("%.0f %c %.0f=%.0f",n1,op,n2,n1-n2); break;
+		case'*': 
+		printf("%.2f %c %.2f=%.2f",n1,op,n2,n1*n2); break;
+		case'/': 
+		{
+			n3=(int)n2;
+			switch(n3)
+			{
+				case 0:
+					printf("cannot be divided by 0"); break;
+				default:
+					printf("%.2f %c %.2f=%.2f",n1,op,n2,n1/n2); break;
+			}
+			break;
+			
+	    }
+		case'%': 
+		{
+			n3=(int)n2;
+			switch(n3)
+			{
+				case 0:
+					printf("cannot operate by 0"); break;
+				default:
+					printf("%.2f %c %.2f=%.2f",(int)n1,op,(int)n2,(int)n1%(int)n2); break;
+			}
+	    } 
+		break;
+		
+		default:
+			printf("operator is invalid"); break;
+	}
+}
