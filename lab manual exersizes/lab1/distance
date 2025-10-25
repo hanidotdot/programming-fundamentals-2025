@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+int hours,i;
+float distance,total=0,avg;
+printf("enter time traveled (1 to 5):");
+scanf("%d",&hours);
+if(hours<1||hours>5){
+printf("time must be between 1 and 5");
+return 0;
+}
+for(i=1;i<=hours;i++){
+printf("enter distance for hour %d:",i);
+scanf("%f",&distance);
+if(distance<0){
+printf("distance cant be negative");
+return 0;
+}
+total=total+distance;
+}
+avg=total/hours;
+printf("average speed=%.2f mph",avg);
+return 0;
+}
+
