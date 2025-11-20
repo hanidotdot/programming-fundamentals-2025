@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+int main()
+{
+    int nums_size,i,j,target,ans1,ans2;
+    printf("Enter the number of elements you will enter in the array:");
+    scanf("%d",&nums_size);
+    int nums[nums_size];
+for(i=0;i<nums_size;i++)
+    {
+        printf("enter element %d:",i+1);
+        scanf("%d",&nums[i]);
+    }
+ printf("enter the target:");
+ scanf("%d",&target);
+ 
+ printf("Input={");
+    for(i=0;i<nums_size;i++)
+    {
+    printf("%d",nums[i]);
+    printf(",");
+    }
+    printf("\b}");
+    printf(", Target=%d",target);
+ 
+ for(i=0;i<nums_size;i++)
+ {
+ 	if(nums[i]>target)
+ 	continue;
+ 	
+ 	for(j=1;j<nums_size;j++)
+ 	{
+ 	   	if ((nums[i]+nums[j])==target)
+ 	   	{
+ 	   		ans1=i;
+ 	   		ans2=j;
+ 	   		printf("\nOutput:{%d,%d}",ans1,ans2);
+ 	   		goto end;
+		}
+		else
+		continue;
+    }
+ 
+}  
+end:
+    return 0;
+}
